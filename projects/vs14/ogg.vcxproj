@@ -1,0 +1,506 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DebugDLL|Win32">
+      <Configuration>DebugDLL</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseDLL|Win32">
+      <Configuration>ReleaseDLL</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DebugDLL|x64">
+      <Configuration>DebugDLL</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseDLL|x64">
+      <Configuration>ReleaseDLL</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\bitwise.c" />
+    <ClCompile Include="..\..\src\framing.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\ogg\ogg.h" />
+    <ClInclude Include="..\..\include\ogg\os_types.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FBB16463-A91B-4B08-B641-DA1A267C04FC}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ogg</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <TargetName>lib$(ProjectName)d</TargetName>
+    <OutDir Condition="'$(ConfigurationType)'=='StaticLibrary'">$(ProjectDir)..\..\..\..\build\msvc\lib\$(PlatformTarget)\</OutDir>
+    <OutDir Condition="'$(ConfigurationType)'=='DynamicLibrary'">$(ProjectDir)..\..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
+    <IntDir>$(OutDir)..\..\obj\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetName>lib$(ProjectName)d</TargetName>
+    <OutDir Condition="'$(ConfigurationType)'=='StaticLibrary'">$(ProjectDir)..\..\..\..\build\msvc\lib\$(PlatformTarget)\</OutDir>
+    <OutDir Condition="'$(ConfigurationType)'=='DynamicLibrary'">$(ProjectDir)..\..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
+    <IntDir>$(OutDir)..\..\obj\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <TargetName>lib$(ProjectName)</TargetName>
+    <OutDir Condition="'$(ConfigurationType)'=='StaticLibrary'">$(ProjectDir)..\..\..\..\build\msvc\lib\$(PlatformTarget)\</OutDir>
+    <OutDir Condition="'$(ConfigurationType)'=='DynamicLibrary'">$(ProjectDir)..\..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
+    <IntDir>$(OutDir)..\..\obj\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TargetName>lib$(ProjectName)</TargetName>
+    <OutDir Condition="'$(ConfigurationType)'=='StaticLibrary'">$(ProjectDir)..\..\..\..\build\msvc\lib\$(PlatformTarget)\</OutDir>
+    <OutDir Condition="'$(ConfigurationType)'=='DynamicLibrary'">$(ProjectDir)..\..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
+    <IntDir>$(OutDir)..\..\obj\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
+    <TargetName>$(ProjectName)d</TargetName>
+    <OutDir Condition="'$(ConfigurationType)'=='StaticLibrary'">$(ProjectDir)..\..\..\..\build\msvc\lib\$(PlatformTarget)\</OutDir>
+    <OutDir Condition="'$(ConfigurationType)'=='DynamicLibrary'">$(ProjectDir)..\..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
+    <IntDir>$(OutDir)..\..\obj\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">
+    <TargetName>$(ProjectName)d</TargetName>
+    <OutDir Condition="'$(ConfigurationType)'=='StaticLibrary'">$(ProjectDir)..\..\..\..\build\msvc\lib\$(PlatformTarget)\</OutDir>
+    <OutDir Condition="'$(ConfigurationType)'=='DynamicLibrary'">$(ProjectDir)..\..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
+    <IntDir>$(OutDir)..\..\obj\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
+    <TargetName>$(ProjectName)</TargetName>
+    <OutDir Condition="'$(ConfigurationType)'=='StaticLibrary'">$(ProjectDir)..\..\..\..\build\msvc\lib\$(PlatformTarget)\</OutDir>
+    <OutDir Condition="'$(ConfigurationType)'=='DynamicLibrary'">$(ProjectDir)..\..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
+    <IntDir>$(OutDir)..\..\obj\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">
+    <TargetName>$(ProjectName)</TargetName>
+    <OutDir Condition="'$(ConfigurationType)'=='StaticLibrary'">$(ProjectDir)..\..\..\..\build\msvc\lib\$(PlatformTarget)\</OutDir>
+    <OutDir Condition="'$(ConfigurationType)'=='DynamicLibrary'">$(ProjectDir)..\..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
+    <IntDir>$(OutDir)..\..\obj\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <ProgramDataBaseFileName>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDataBaseFileName>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\include;$(ProjectDir)..\..\include;$(OutDir)..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Lib>
+      <TargetMachine>MachineX86</TargetMachine>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>$(OutDir)..\..\lib\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <PreBuildEvent>
+      <Command>IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
+  DEL "$(OutDir)..\..\licenses\$(ProjectName).txt"
+)
+
+IF EXIST "$(OutDir)..\..\include\$(ProjectName)" (
+  RD /s /q "$(OutDir)..\..\include\$(ProjectName)"
+)</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>MKDIR "$(OutDir)..\..\include"
+MKDIR "$(OutDir)..\..\include\$(ProjectName)"
+
+COPY "$(ProjectDir)..\..\include\ogg\*.h" "$(OutDir)..\..\include\$(ProjectName)"
+
+MKDIR "$(OutDir)..\..\licenses"
+COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\include;$(ProjectDir)..\..\include;$(OutDir)..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ProgramDataBaseFileName>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Lib>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>$(OutDir)..\..\lib\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <PreBuildEvent>
+      <Command>IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
+  DEL "$(OutDir)..\..\licenses\$(ProjectName).txt"
+)
+
+IF EXIST "$(OutDir)..\..\include\$(ProjectName)" (
+  RD /s /q "$(OutDir)..\..\include\$(ProjectName)"
+)</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>MKDIR "$(OutDir)..\..\include"
+MKDIR "$(OutDir)..\..\include\$(ProjectName)"
+
+COPY "$(ProjectDir)..\..\include\ogg\*.h" "$(OutDir)..\..\include\$(ProjectName)"
+
+MKDIR "$(OutDir)..\..\licenses"
+COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\include;$(ProjectDir)..\..\include;$(OutDir)..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ProgramDataBaseFileName>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDataBaseFileName>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Lib>
+      <TargetMachine>MachineX86</TargetMachine>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>$(OutDir)..\..\lib\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <PreBuildEvent>
+      <Command>IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
+  DEL "$(OutDir)..\..\licenses\$(ProjectName).txt"
+)
+
+IF EXIST "$(OutDir)..\..\include\$(ProjectName)" (
+  RD /s /q "$(OutDir)..\..\include\$(ProjectName)"
+)</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>MKDIR "$(OutDir)..\..\include"
+MKDIR "$(OutDir)..\..\include\$(ProjectName)"
+
+COPY "$(ProjectDir)..\..\include\ogg\*.h" "$(OutDir)..\..\include\$(ProjectName)"
+
+MKDIR "$(OutDir)..\..\licenses"
+COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\include;$(ProjectDir)..\..\include;$(OutDir)..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ProgramDataBaseFileName>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDataBaseFileName>
+      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Lib>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>$(OutDir)..\..\lib\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <PreBuildEvent>
+      <Command>IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
+  DEL "$(OutDir)..\..\licenses\$(ProjectName).txt"
+)
+
+IF EXIST "$(OutDir)..\..\include\$(ProjectName)" (
+  RD /s /q "$(OutDir)..\..\include\$(ProjectName)"
+)</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>MKDIR "$(OutDir)..\..\include"
+MKDIR "$(OutDir)..\..\include\$(ProjectName)"
+
+COPY "$(ProjectDir)..\..\include\ogg\*.h" "$(OutDir)..\..\include\$(ProjectName)"
+
+MKDIR "$(OutDir)..\..\licenses"
+COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
+    <ClCompile>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\include;$(ProjectDir)..\..\include;$(OutDir)..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <PreprocessorDefinitions>OGG_DLL_BUILD;_DEBUG;_WINDOWS;_USRDLL;WIN32;DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <ImportLibrary>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
+      <ProfileGuidedDatabase>$(IntDir)$(TargetName).pgd</ProfileGuidedDatabase>
+      <ProgramDatabaseFile>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDatabaseFile>
+      <AdditionalLibraryDirectories>$(OutDir)..\..\lib\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <PreBuildEvent>
+      <Command>IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
+  DEL "$(OutDir)..\..\licenses\$(ProjectName).txt"
+)
+
+IF EXIST "$(OutDir)..\..\include\$(ProjectName)" (
+  RD /s /q "$(OutDir)..\..\include\$(ProjectName)"
+)</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>MKDIR "$(OutDir)..\..\include"
+MKDIR "$(OutDir)..\..\include\$(ProjectName)"
+
+COPY "$(ProjectDir)..\..\include\ogg\*.h" "$(OutDir)..\..\include\$(ProjectName)"
+
+MKDIR "$(OutDir)..\..\licenses"
+COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">
+    <ClCompile>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\include;$(ProjectDir)..\..\include;$(OutDir)..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <PreprocessorDefinitions>OGG_DLL_BUILD;_DEBUG;_WINDOWS;_USRDLL;WIN32;DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <ImportLibrary>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
+      <ProfileGuidedDatabase>$(IntDir)$(TargetName).pgd</ProfileGuidedDatabase>
+      <ProgramDatabaseFile>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDatabaseFile>
+      <AdditionalLibraryDirectories>$(OutDir)..\..\lib\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PreBuildEvent>
+      <Command>IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
+  DEL "$(OutDir)..\..\licenses\$(ProjectName).txt"
+)
+
+IF EXIST "$(OutDir)..\..\include\$(ProjectName)" (
+  RD /s /q "$(OutDir)..\..\include\$(ProjectName)"
+)</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>MKDIR "$(OutDir)..\..\include"
+MKDIR "$(OutDir)..\..\include\$(ProjectName)"
+
+COPY "$(ProjectDir)..\..\include\ogg\*.h" "$(OutDir)..\..\include\$(ProjectName)"
+
+MKDIR "$(OutDir)..\..\licenses"
+COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
+    <ClCompile>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\include;$(ProjectDir)..\..\include;$(OutDir)..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <PreprocessorDefinitions>OGG_DLL_BUILD;WIN32;NDEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <ImportLibrary>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
+      <ProfileGuidedDatabase>$(IntDir)$(TargetName).pgd</ProfileGuidedDatabase>
+      <ProgramDatabaseFile>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDatabaseFile>
+      <AdditionalLibraryDirectories>$(OutDir)..\..\lib\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <PreBuildEvent>
+      <Command>IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
+  DEL "$(OutDir)..\..\licenses\$(ProjectName).txt"
+)
+
+IF EXIST "$(OutDir)..\..\include\$(ProjectName)" (
+  RD /s /q "$(OutDir)..\..\include\$(ProjectName)"
+)</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>MKDIR "$(OutDir)..\..\include"
+MKDIR "$(OutDir)..\..\include\$(ProjectName)"
+
+COPY "$(ProjectDir)..\..\include\ogg\*.h" "$(OutDir)..\..\include\$(ProjectName)"
+
+MKDIR "$(OutDir)..\..\licenses"
+COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">
+    <ClCompile>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\include;$(ProjectDir)..\..\include;$(OutDir)..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <PreprocessorDefinitions>OGG_DLL_BUILD;NDEBUG;_WINDOWS;_USRDLL;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ShowIncludes>true</ShowIncludes>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <ImportLibrary>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
+      <ProfileGuidedDatabase>$(IntDir)$(TargetName).pgd</ProfileGuidedDatabase>
+      <ProgramDatabaseFile>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDatabaseFile>
+      <AdditionalLibraryDirectories>$(OutDir)..\..\lib\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <PreBuildEvent>
+      <Command>IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
+  DEL "$(OutDir)..\..\licenses\$(ProjectName).txt"
+)
+
+IF EXIST "$(OutDir)..\..\include\$(ProjectName)" (
+  RD /s /q "$(OutDir)..\..\include\$(ProjectName)"
+)</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>MKDIR "$(OutDir)..\..\include"
+MKDIR "$(OutDir)..\..\include\$(ProjectName)"
+
+COPY "$(ProjectDir)..\..\include\ogg\*.h" "$(OutDir)..\..\include\$(ProjectName)"
+
+MKDIR "$(OutDir)..\..\licenses"
+COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
