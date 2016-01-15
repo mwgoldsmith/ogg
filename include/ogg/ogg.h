@@ -17,6 +17,20 @@
 #ifndef _OGG_H
 #define _OGG_H
 
+#if defined(_WIN32) || defined(_WIN64) || defined(_WINDOWS)
+#  if defined(OGG_DLL_BUILD)
+#    define OGG_API __declspec(dllexport)
+#  elif defined(_USRDLL)
+#    define OGG_API __declspec(dllimport)
+#  else
+#    define OGG_API 
+#  endif /* PROJECT_DLL_BUILD */
+#elif defined(__GNUC__) && (__GNUC__ >= 4)
+#  define OGG_API __attribute__((__visibility__("default")))
+#else
+#  define OGG_API
+#endif /* _WIN32 || _WIN64 || _WINDOWS */           
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -115,92 +129,91 @@ typedef struct {
 
 /* Ogg BITSTREAM PRIMITIVES: bitstream ************************/
 
-extern void  oggpack_writeinit(oggpack_buffer *b);
-extern int   oggpack_writecheck(oggpack_buffer *b);
-extern void  oggpack_writetrunc(oggpack_buffer *b,long bits);
-extern void  oggpack_writealign(oggpack_buffer *b);
-extern void  oggpack_writecopy(oggpack_buffer *b,void *source,long bits);
-extern void  oggpack_reset(oggpack_buffer *b);
-extern void  oggpack_writeclear(oggpack_buffer *b);
-extern void  oggpack_readinit(oggpack_buffer *b,unsigned char *buf,int bytes);
-extern void  oggpack_write(oggpack_buffer *b,unsigned long value,int bits);
-extern long  oggpack_look(oggpack_buffer *b,int bits);
-extern long  oggpack_look1(oggpack_buffer *b);
-extern void  oggpack_adv(oggpack_buffer *b,int bits);
-extern void  oggpack_adv1(oggpack_buffer *b);
-extern long  oggpack_read(oggpack_buffer *b,int bits);
-extern long  oggpack_read1(oggpack_buffer *b);
-extern long  oggpack_bytes(oggpack_buffer *b);
-extern long  oggpack_bits(oggpack_buffer *b);
-extern unsigned char *oggpack_get_buffer(oggpack_buffer *b);
+OGG_API void  oggpack_writeinit(oggpack_buffer *b);
+OGG_API int   oggpack_writecheck(oggpack_buffer *b);
+OGG_API void  oggpack_writetrunc(oggpack_buffer *b,long bits);
+OGG_API void  oggpack_writealign(oggpack_buffer *b);
+OGG_API void  oggpack_writecopy(oggpack_buffer *b,void *source,long bits);
+OGG_API void  oggpack_reset(oggpack_buffer *b);
+OGG_API void  oggpack_writeclear(oggpack_buffer *b);
+OGG_API void  oggpack_readinit(oggpack_buffer *b,unsigned char *buf,int bytes);
+OGG_API void  oggpack_write(oggpack_buffer *b,unsigned long value,int bits);
+OGG_API long  oggpack_look(oggpack_buffer *b,int bits);
+OGG_API long  oggpack_look1(oggpack_buffer *b);
+OGG_API void  oggpack_adv(oggpack_buffer *b,int bits);
+OGG_API void  oggpack_adv1(oggpack_buffer *b);
+OGG_API long  oggpack_read(oggpack_buffer *b,int bits);
+OGG_API long  oggpack_read1(oggpack_buffer *b);
+OGG_API long  oggpack_bytes(oggpack_buffer *b);
+OGG_API long  oggpack_bits(oggpack_buffer *b);
+OGG_API unsigned char *oggpack_get_buffer(oggpack_buffer *b);
 
-extern void  oggpackB_writeinit(oggpack_buffer *b);
-extern int   oggpackB_writecheck(oggpack_buffer *b);
-extern void  oggpackB_writetrunc(oggpack_buffer *b,long bits);
-extern void  oggpackB_writealign(oggpack_buffer *b);
-extern void  oggpackB_writecopy(oggpack_buffer *b,void *source,long bits);
-extern void  oggpackB_reset(oggpack_buffer *b);
-extern void  oggpackB_writeclear(oggpack_buffer *b);
-extern void  oggpackB_readinit(oggpack_buffer *b,unsigned char *buf,int bytes);
-extern void  oggpackB_write(oggpack_buffer *b,unsigned long value,int bits);
-extern long  oggpackB_look(oggpack_buffer *b,int bits);
-extern long  oggpackB_look1(oggpack_buffer *b);
-extern void  oggpackB_adv(oggpack_buffer *b,int bits);
-extern void  oggpackB_adv1(oggpack_buffer *b);
-extern long  oggpackB_read(oggpack_buffer *b,int bits);
-extern long  oggpackB_read1(oggpack_buffer *b);
-extern long  oggpackB_bytes(oggpack_buffer *b);
-extern long  oggpackB_bits(oggpack_buffer *b);
-extern unsigned char *oggpackB_get_buffer(oggpack_buffer *b);
+OGG_API void  oggpackB_writeinit(oggpack_buffer *b);
+OGG_API int   oggpackB_writecheck(oggpack_buffer *b);
+OGG_API void  oggpackB_writetrunc(oggpack_buffer *b,long bits);
+OGG_API void  oggpackB_writealign(oggpack_buffer *b);
+OGG_API void  oggpackB_writecopy(oggpack_buffer *b,void *source,long bits);
+OGG_API void  oggpackB_reset(oggpack_buffer *b);
+OGG_API void  oggpackB_writeclear(oggpack_buffer *b);
+OGG_API void  oggpackB_readinit(oggpack_buffer *b,unsigned char *buf,int bytes);
+OGG_API void  oggpackB_write(oggpack_buffer *b,unsigned long value,int bits);
+OGG_API long  oggpackB_look(oggpack_buffer *b,int bits);
+OGG_API long  oggpackB_look1(oggpack_buffer *b);
+OGG_API void  oggpackB_adv(oggpack_buffer *b,int bits);
+OGG_API void  oggpackB_adv1(oggpack_buffer *b);
+OGG_API long  oggpackB_read(oggpack_buffer *b,int bits);
+OGG_API long  oggpackB_read1(oggpack_buffer *b);
+OGG_API long  oggpackB_bytes(oggpack_buffer *b);
+OGG_API long  oggpackB_bits(oggpack_buffer *b);
+OGG_API unsigned char *oggpackB_get_buffer(oggpack_buffer *b);
 
 /* Ogg BITSTREAM PRIMITIVES: encoding **************************/
 
-extern int      ogg_stream_packetin(ogg_stream_state *os, ogg_packet *op);
-extern int      ogg_stream_iovecin(ogg_stream_state *os, ogg_iovec_t *iov,
-                                   int count, long e_o_s, ogg_int64_t granulepos);
-extern int      ogg_stream_pageout(ogg_stream_state *os, ogg_page *og);
-extern int      ogg_stream_pageout_fill(ogg_stream_state *os, ogg_page *og, int nfill);
-extern int      ogg_stream_flush(ogg_stream_state *os, ogg_page *og);
-extern int      ogg_stream_flush_fill(ogg_stream_state *os, ogg_page *og, int nfill);
+OGG_API int      ogg_stream_packetin(ogg_stream_state *os, ogg_packet *op);
+OGG_API int      ogg_stream_iovecin(ogg_stream_state *os, ogg_iovec_t *iov, int count, long e_o_s, ogg_int64_t granulepos);
+OGG_API int      ogg_stream_pageout(ogg_stream_state *os, ogg_page *og);
+OGG_API int      ogg_stream_pageout_fill(ogg_stream_state *os, ogg_page *og, int nfill);
+OGG_API int      ogg_stream_flush(ogg_stream_state *os, ogg_page *og);
+OGG_API int      ogg_stream_flush_fill(ogg_stream_state *os, ogg_page *og, int nfill);
 
 /* Ogg BITSTREAM PRIMITIVES: decoding **************************/
 
-extern int      ogg_sync_init(ogg_sync_state *oy);
-extern int      ogg_sync_clear(ogg_sync_state *oy);
-extern int      ogg_sync_reset(ogg_sync_state *oy);
-extern int      ogg_sync_destroy(ogg_sync_state *oy);
-extern int      ogg_sync_check(ogg_sync_state *oy);
+OGG_API int      ogg_sync_init(ogg_sync_state *oy);
+OGG_API int      ogg_sync_clear(ogg_sync_state *oy);
+OGG_API int      ogg_sync_reset(ogg_sync_state *oy);
+OGG_API int      ogg_sync_destroy(ogg_sync_state *oy);
+OGG_API int      ogg_sync_check(ogg_sync_state *oy);
 
-extern char    *ogg_sync_buffer(ogg_sync_state *oy, long size);
-extern int      ogg_sync_wrote(ogg_sync_state *oy, long bytes);
-extern long     ogg_sync_pageseek(ogg_sync_state *oy,ogg_page *og);
-extern int      ogg_sync_pageout(ogg_sync_state *oy, ogg_page *og);
-extern int      ogg_stream_pagein(ogg_stream_state *os, ogg_page *og);
-extern int      ogg_stream_packetout(ogg_stream_state *os,ogg_packet *op);
-extern int      ogg_stream_packetpeek(ogg_stream_state *os,ogg_packet *op);
+OGG_API char    *ogg_sync_buffer(ogg_sync_state *oy, long size);
+OGG_API int      ogg_sync_wrote(ogg_sync_state *oy, long bytes);
+OGG_API long     ogg_sync_pageseek(ogg_sync_state *oy,ogg_page *og);
+OGG_API int      ogg_sync_pageout(ogg_sync_state *oy, ogg_page *og);
+OGG_API int      ogg_stream_pagein(ogg_stream_state *os, ogg_page *og);
+OGG_API int      ogg_stream_packetout(ogg_stream_state *os,ogg_packet *op);
+OGG_API int      ogg_stream_packetpeek(ogg_stream_state *os,ogg_packet *op);
 
 /* Ogg BITSTREAM PRIMITIVES: general ***************************/
 
-extern int      ogg_stream_init(ogg_stream_state *os,int serialno);
-extern int      ogg_stream_clear(ogg_stream_state *os);
-extern int      ogg_stream_reset(ogg_stream_state *os);
-extern int      ogg_stream_reset_serialno(ogg_stream_state *os,int serialno);
-extern int      ogg_stream_destroy(ogg_stream_state *os);
-extern int      ogg_stream_check(ogg_stream_state *os);
-extern int      ogg_stream_eos(ogg_stream_state *os);
+OGG_API int      ogg_stream_init(ogg_stream_state *os,int serialno);
+OGG_API int      ogg_stream_clear(ogg_stream_state *os);
+OGG_API int      ogg_stream_reset(ogg_stream_state *os);
+OGG_API int      ogg_stream_reset_serialno(ogg_stream_state *os,int serialno);
+OGG_API int      ogg_stream_destroy(ogg_stream_state *os);
+OGG_API int      ogg_stream_check(ogg_stream_state *os);
+OGG_API int      ogg_stream_eos(ogg_stream_state *os);
 
-extern void     ogg_page_checksum_set(ogg_page *og);
+OGG_API void     ogg_page_checksum_set(ogg_page *og);
 
-extern int      ogg_page_version(const ogg_page *og);
-extern int      ogg_page_continued(const ogg_page *og);
-extern int      ogg_page_bos(const ogg_page *og);
-extern int      ogg_page_eos(const ogg_page *og);
-extern ogg_int64_t  ogg_page_granulepos(const ogg_page *og);
-extern int      ogg_page_serialno(const ogg_page *og);
-extern long     ogg_page_pageno(const ogg_page *og);
-extern int      ogg_page_packets(const ogg_page *og);
+OGG_API int      ogg_page_version(const ogg_page *og);
+OGG_API int      ogg_page_continued(const ogg_page *og);
+OGG_API int      ogg_page_bos(const ogg_page *og);
+OGG_API int      ogg_page_eos(const ogg_page *og);
+OGG_API ogg_int64_t  ogg_page_granulepos(const ogg_page *og);
+OGG_API int      ogg_page_serialno(const ogg_page *og);
+OGG_API long     ogg_page_pageno(const ogg_page *og);
+OGG_API int      ogg_page_packets(const ogg_page *og);
 
-extern void     ogg_packet_clear(ogg_packet *op);
+OGG_API void     ogg_packet_clear(ogg_packet *op);
 
 
 #ifdef __cplusplus
