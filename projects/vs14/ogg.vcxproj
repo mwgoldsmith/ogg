@@ -34,14 +34,6 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\src\bitwise.c" />
-    <ClCompile Include="..\..\src\framing.c" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\include\ogg\ogg.h" />
-    <ClInclude Include="..\..\include\ogg\os_types.h" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{FBB16463-A91B-4B08-B641-DA1A267C04FC}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -467,7 +459,6 @@ COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"</
       <AdditionalIncludeDirectories>$(ProjectDir)..\include;$(ProjectDir)..\..\include;$(OutDir)..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
       <PreprocessorDefinitions>OGG_DLL_BUILD;NDEBUG;_WINDOWS;_USRDLL;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ShowIncludes>true</ShowIncludes>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -500,6 +491,14 @@ MKDIR "$(OutDir)..\..\licenses"
 COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\bitwise.c" />
+    <ClCompile Include="..\..\src\framing.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\ogg\ogg.h" />
+    <ClInclude Include="..\..\include\ogg\os_types.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
