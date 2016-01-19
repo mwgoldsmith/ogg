@@ -24,7 +24,7 @@
 #    define OGG_API __declspec(dllimport)
 #  else
 #    define OGG_API 
-#  endif /* PROJECT_DLL_BUILD */
+#  endif /* OGG_DLL_BUILD */
 #elif defined(__GNUC__) && (__GNUC__ >= 4)
 #  define OGG_API __attribute__((__visibility__("default")))
 #else
