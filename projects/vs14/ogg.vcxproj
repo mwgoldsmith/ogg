@@ -199,22 +199,31 @@
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <PreBuildEvent>
-      <Command>IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
+      <Command>
+IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
   DEL "$(OutDir)..\..\licenses\$(ProjectName).txt"
 )
 
 IF EXIST "$(OutDir)..\..\include\$(ProjectName)" (
   RD /s /q "$(OutDir)..\..\include\$(ProjectName)"
-)</Command>
+)
+      </Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>MKDIR "$(OutDir)..\..\include"
+      <Command>
+ECHO Off
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+MKDIR "$(OutDir)..\..\include"
 MKDIR "$(OutDir)..\..\include\$(ProjectName)"
 
 COPY "$(ProjectDir)..\..\include\ogg\*.h" "$(OutDir)..\..\include\$(ProjectName)"
 
 MKDIR "$(OutDir)..\..\licenses"
-COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"</Command>
+COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
+
+ENDLOCAL
+      </Command>
     </PostBuildEvent>
     <Bscmake>
       <PreserveSbr>true</PreserveSbr>
@@ -239,22 +248,31 @@ COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"</
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <PreBuildEvent>
-      <Command>IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
+      <Command>
+IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
   DEL "$(OutDir)..\..\licenses\$(ProjectName).txt"
 )
 
 IF EXIST "$(OutDir)..\..\include\$(ProjectName)" (
   RD /s /q "$(OutDir)..\..\include\$(ProjectName)"
-)</Command>
+)
+      </Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>MKDIR "$(OutDir)..\..\include"
+      <Command>
+ECHO Off
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+MKDIR "$(OutDir)..\..\include"
 MKDIR "$(OutDir)..\..\include\$(ProjectName)"
 
 COPY "$(ProjectDir)..\..\include\ogg\*.h" "$(OutDir)..\..\include\$(ProjectName)"
 
 MKDIR "$(OutDir)..\..\licenses"
-COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"</Command>
+COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
+
+ENDLOCAL
+      </Command>
     </PostBuildEvent>
     <Bscmake>
       <PreserveSbr>true</PreserveSbr>
@@ -282,22 +300,31 @@ COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"</
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <PreBuildEvent>
-      <Command>IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
+      <Command>
+IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
   DEL "$(OutDir)..\..\licenses\$(ProjectName).txt"
 )
 
 IF EXIST "$(OutDir)..\..\include\$(ProjectName)" (
   RD /s /q "$(OutDir)..\..\include\$(ProjectName)"
-)</Command>
+)
+      </Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>MKDIR "$(OutDir)..\..\include"
+      <Command>
+ECHO Off
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+MKDIR "$(OutDir)..\..\include"
 MKDIR "$(OutDir)..\..\include\$(ProjectName)"
 
 COPY "$(ProjectDir)..\..\include\ogg\*.h" "$(OutDir)..\..\include\$(ProjectName)"
 
 MKDIR "$(OutDir)..\..\licenses"
-COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"</Command>
+COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
+
+ENDLOCAL
+      </Command>
     </PostBuildEvent>
     <Bscmake>
       <PreserveSbr>true</PreserveSbr>
@@ -324,22 +351,31 @@ COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"</
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <PreBuildEvent>
-      <Command>IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
+      <Command>
+IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
   DEL "$(OutDir)..\..\licenses\$(ProjectName).txt"
 )
 
 IF EXIST "$(OutDir)..\..\include\$(ProjectName)" (
   RD /s /q "$(OutDir)..\..\include\$(ProjectName)"
-)</Command>
+)
+      </Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>MKDIR "$(OutDir)..\..\include"
+      <Command>
+ECHO Off
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+MKDIR "$(OutDir)..\..\include"
 MKDIR "$(OutDir)..\..\include\$(ProjectName)"
 
 COPY "$(ProjectDir)..\..\include\ogg\*.h" "$(OutDir)..\..\include\$(ProjectName)"
 
 MKDIR "$(OutDir)..\..\licenses"
-COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"</Command>
+COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
+
+ENDLOCAL
+      </Command>
     </PostBuildEvent>
     <Bscmake>
       <PreserveSbr>true</PreserveSbr>
@@ -369,22 +405,31 @@ COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"</
       <LargeAddressAware>true</LargeAddressAware>
     </Link>
     <PreBuildEvent>
-      <Command>IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
+      <Command>
+IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
   DEL "$(OutDir)..\..\licenses\$(ProjectName).txt"
 )
 
 IF EXIST "$(OutDir)..\..\include\$(ProjectName)" (
   RD /s /q "$(OutDir)..\..\include\$(ProjectName)"
-)</Command>
+)
+      </Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>MKDIR "$(OutDir)..\..\include"
+      <Command>
+ECHO Off
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+MKDIR "$(OutDir)..\..\include"
 MKDIR "$(OutDir)..\..\include\$(ProjectName)"
 
 COPY "$(ProjectDir)..\..\include\ogg\*.h" "$(OutDir)..\..\include\$(ProjectName)"
 
 MKDIR "$(OutDir)..\..\licenses"
-COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"</Command>
+COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
+
+ENDLOCAL
+      </Command>
     </PostBuildEvent>
     <Bscmake>
       <PreserveSbr>true</PreserveSbr>
@@ -413,22 +458,31 @@ COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"</
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
-      <Command>IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
+      <Command>
+IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
   DEL "$(OutDir)..\..\licenses\$(ProjectName).txt"
 )
 
 IF EXIST "$(OutDir)..\..\include\$(ProjectName)" (
   RD /s /q "$(OutDir)..\..\include\$(ProjectName)"
-)</Command>
+)
+      </Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>MKDIR "$(OutDir)..\..\include"
+      <Command>
+ECHO Off
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+MKDIR "$(OutDir)..\..\include"
 MKDIR "$(OutDir)..\..\include\$(ProjectName)"
 
 COPY "$(ProjectDir)..\..\include\ogg\*.h" "$(OutDir)..\..\include\$(ProjectName)"
 
 MKDIR "$(OutDir)..\..\licenses"
-COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"</Command>
+COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
+
+ENDLOCAL
+      </Command>
     </PostBuildEvent>
     <Bscmake>
       <PreserveSbr>true</PreserveSbr>
@@ -462,22 +516,31 @@ COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"</
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <PreBuildEvent>
-      <Command>IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
+      <Command>
+IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
   DEL "$(OutDir)..\..\licenses\$(ProjectName).txt"
 )
 
 IF EXIST "$(OutDir)..\..\include\$(ProjectName)" (
   RD /s /q "$(OutDir)..\..\include\$(ProjectName)"
-)</Command>
+)
+      </Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>MKDIR "$(OutDir)..\..\include"
+      <Command>
+ECHO Off
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+MKDIR "$(OutDir)..\..\include"
 MKDIR "$(OutDir)..\..\include\$(ProjectName)"
 
 COPY "$(ProjectDir)..\..\include\ogg\*.h" "$(OutDir)..\..\include\$(ProjectName)"
 
 MKDIR "$(OutDir)..\..\licenses"
-COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"</Command>
+COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
+
+ENDLOCAL
+      </Command>
     </PostBuildEvent>
     <Bscmake>
       <PreserveSbr>true</PreserveSbr>
@@ -510,22 +573,31 @@ COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"</
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <PreBuildEvent>
-      <Command>IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
+      <Command>
+IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
   DEL "$(OutDir)..\..\licenses\$(ProjectName).txt"
 )
 
 IF EXIST "$(OutDir)..\..\include\$(ProjectName)" (
   RD /s /q "$(OutDir)..\..\include\$(ProjectName)"
-)</Command>
+)
+      </Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>MKDIR "$(OutDir)..\..\include"
+      <Command>
+ECHO Off
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+MKDIR "$(OutDir)..\..\include"
 MKDIR "$(OutDir)..\..\include\$(ProjectName)"
 
 COPY "$(ProjectDir)..\..\include\ogg\*.h" "$(OutDir)..\..\include\$(ProjectName)"
 
 MKDIR "$(OutDir)..\..\licenses"
-COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"</Command>
+COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
+
+ENDLOCAL
+      </Command>
     </PostBuildEvent>
     <Bscmake>
       <PreserveSbr>true</PreserveSbr>
