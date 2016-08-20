@@ -33,3 +33,4 @@ src/test_*
 macosx/build/
 *.opendb
 .vs/
+*.db
